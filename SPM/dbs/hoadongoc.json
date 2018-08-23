@@ -1,0 +1,99 @@
+{
+   "generalInvoiceInfo":{
+      "invoiceType":"01GTKT",
+      "templateCode":"01GTKT0/170",
+	"invoiceSeries":"AA/17E",
+      "transactionUuid": "123e4567-e89b-12d3-a456-426655440000",
+      "invoiceIssuedDate":1517301625626,
+      "currencyCode":"VND",
+      "adjustmentType":"1",
+      "paymentStatus":true,
+      "paymentType":"TM",
+      "paymentTypeName":"TM",
+      "cusGetInvoiceRight":true,
+      "buyerIdNo":"123456789",
+      "buyerIdType":"1",
+	  "userName":"user 1"
+   },
+   "buyerInfo":{
+      "buyerName":"Đặng thị thanh tâm",
+      "buyerLegalName":"",
+      "buyerTaxCode":"",
+      "buyerAddressLine":"HN VN",
+      "buyerPhoneNumber":"11111",
+      "buyerEmail":"",
+      "buyerIdNo":"123456789",
+      "buyerIdType":"1"
+   },
+   "sellerInfo": {
+      "sellerLegalName":"Đặng thị thanh tâm",
+      "sellerTaxCode":"0100109106-501",
+      "sellerAddressLine":"test",
+      "sellerPhoneNumber":"0123456789",
+      "sellerEmail":"PerformanceTest1@viettel.com.vn",
+      "sellerBankName":"vtbank",
+      "sellerBankAccount":"23423424"
+   },
+   "extAttribute":[
+
+   ],
+   "payments":[
+      {
+         "paymentMethodName":"TM"
+      }
+   ],
+   "deliveryInfo":{
+
+   },
+   "itemInfo":[
+      {
+         "lineNumber":1,
+         "itemCode":"ENGLISH_COURSE",
+         "itemName":"Khóa học tiếng anh",
+         "unitName":"khóa học",
+         "unitPrice":3500000.0,
+         "quantity":10.0,
+         "itemTotalAmountWithoutTax":35000000,
+         "taxPercentage":10.0,
+         "taxAmount":0.0,
+         "discount":0.0,
+         "itemDiscount":150000.0
+      }
+   ],
+   "discountItemInfo":[
+
+   ],
+"metadata":[
+
+   ],
+
+  "meterReading": [{
+            "previousIndex": "5454",
+            "currentIndex": "244",
+            "factor": "22",
+            "amount": "2"
+          },
+          {
+            "previousIndex": "44",
+            "currentIndex": "44",
+            "factor": "33",
+            "amount": "3"
+          }],
+   "summarizeInfo":{
+      "sumOfTotalLineAmountWithoutTax":35000000,
+      "totalAmountWithoutTax":35000000,
+      "totalTaxAmount":3500000.0,
+      "totalAmountWithTax":38500000,
+      "totalAmountWithTaxInWords":"Ba mươi tám triệu năm trăm nghìn đồng chẵn",
+      "discountAmount":0.0,
+      "settlementDiscountAmount":0.0,
+      "taxPercentage":10.0
+   },
+   "taxBreakdowns":[
+      {
+         "taxPercentage":10.0,
+         "taxableAmount":35000000,
+         "taxAmount":3500000.0
+      }
+   ]
+}
