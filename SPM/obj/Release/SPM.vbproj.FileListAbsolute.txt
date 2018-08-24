@@ -1,0 +1,17 @@
+D:\VB\SPM\SPM\bin\Release\SPM.exe.config
+D:\VB\SPM\SPM\bin\Release\SPM.exe
+D:\VB\SPM\SPM\bin\Release\SPM.pdb
+D:\VB\SPM\SPM\bin\Release\SPM.xml
+D:\VB\SPM\SPM\bin\Release\MetroFramework.Design.dll
+D:\VB\SPM\SPM\bin\Release\MetroFramework.dll
+D:\VB\SPM\SPM\bin\Release\MetroFramework.Fonts.dll
+D:\VB\SPM\SPM\bin\Release\Newtonsoft.Json.dll
+D:\VB\SPM\SPM\bin\Release\Newtonsoft.Json.xml
+D:\VB\SPM\SPM\obj\Release\SPM.InvoiceClient.Main.resources
+D:\VB\SPM\SPM\obj\Release\SPM.Resources.resources
+D:\VB\SPM\SPM\obj\Release\SPM.vbproj.GenerateResource.cache
+D:\VB\SPM\SPM\obj\Release\SPM.vbproj.CoreCompileInputs.cache
+D:\VB\SPM\SPM\obj\Release\SPM.vbproj.CopyComplete
+D:\VB\SPM\SPM\obj\Release\SPM.exe
+D:\VB\SPM\SPM\obj\Release\SPM.xml
+D:\VB\SPM\SPM\obj\Release\SPM.pdb
