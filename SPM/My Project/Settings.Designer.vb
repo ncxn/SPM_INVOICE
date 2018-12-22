@@ -74,6 +74,17 @@ Namespace My
                 Return CType(Me("spmConnectionString"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Provider=SQLOLEDB.1;Data Source=ServerKT;Persist Security Info=True;Password=1;Us"& _ 
+            "er ID=SA;Initial Catalog=spm_09")>  _
+        Public ReadOnly Property ConnectionStringSPM_09() As String
+            Get
+                Return CType(Me("ConnectionStringSPM_09"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 

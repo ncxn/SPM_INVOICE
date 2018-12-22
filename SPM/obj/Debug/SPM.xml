@@ -22,70 +22,64 @@ SPM
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
-<member name="T:SPM.spmDataSet">
-<summary>
-Represents a strongly typed in-memory cache of data.
-</summary>
+<member name="M:SPM.SQLiteDatabase.GetDataTable(System.String)">
+ <summary>
+     Allows the programmer to run a query against the Database.
+ </summary>
+ <param name="sql">The SQL to run</param>
+ <returns>A DataTable containing the result set.</returns>
 </member>
-<member name="T:SPM.spmDataSet.generalInvoiceInfoDataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
+<member name="M:SPM.SQLiteDatabase.ExecuteNonQuery(System.String)">
+ <summary>
+     Allows the programmer to interact with the database for purposes other than a query.
+ </summary>
+ <param name="sql">The SQL to be run.</param>
+ <returns>An Integer containing the number of rows updated.</returns>
 </member>
-<member name="T:SPM.spmDataSet.generalInvoiceInfoRow">
-<summary>
-Represents strongly named DataRow class.
-</summary>
+<member name="M:SPM.SQLiteDatabase.ExecuteScalar(System.String)">
+ <summary>
+     Allows the programmer to retrieve single items from the DB.
+ </summary>
+ <param name="sql">The query to run.</param>
+ <returns>A string.</returns>
 </member>
-<member name="T:SPM.spmDataSet.generalInvoiceInfoRowChangeEvent">
-<summary>
-Row event argument class
-</summary>
+<member name="M:SPM.SQLiteDatabase.Update(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String)">
+ <summary>
+     Allows the programmer to easily update rows in the DB.
+ </summary>
+ <param name="tableName">The table to update.</param>
+ <param name="data">A dictionary containing Column names and their new values.</param>
+ <param name="where">The where clause for the update statement.</param>
+ <returns>A boolean true or false to signify success or failure.</returns>
 </member>
-<member name="T:SPM.spmDataSetTableAdapters.generalInvoiceInfoTableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
+<member name="M:SPM.SQLiteDatabase.Delete(System.String,System.String)">
+ <summary>
+     Allows the programmer to easily delete rows from the DB.
+ </summary>
+ <param name="tableName">The table from which to delete.</param>
+ <param name="where">The where clause for the delete.</param>
+ <returns>A boolean true or false to signify success or failure.</returns>
 </member>
-<member name="T:SPM.spmDataSetTableAdapters.TableAdapterManager">
-<summary>
-TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-</summary>
+<member name="M:SPM.SQLiteDatabase.Insert(System.String,System.Collections.Generic.Dictionary{System.String,System.String})">
+ <summary>
+     Allows the programmer to easily insert into the DB
+ </summary>
+ <param name="tableName">The table into which we insert the data.</param>
+ <param name="data">A dictionary containing the column names and data for the insert.</param>
+ <returns>A boolean true or false to signify success or failure.</returns>
 </member>
-<member name="M:SPM.spmDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SPM.spmDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Update rows in top-down order.
-</summary>
+<member name="M:SPM.SQLiteDatabase.ClearDB">
+ <summary>
+     Allows the programmer to easily delete all data from the DB.
+ </summary>
+ <returns>A boolean true or false to signify success or failure.</returns>
 </member>
-<member name="M:SPM.spmDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SPM.spmDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Insert rows in top-down order.
-</summary>
-</member>
-<member name="M:SPM.spmDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SPM.spmDataSet,System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Delete rows in bottom-up order.
-</summary>
-</member>
-<member name="M:SPM.spmDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
-<summary>
-Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-</summary>
-</member>
-<member name="M:SPM.spmDataSetTableAdapters.TableAdapterManager.UpdateAll(SPM.spmDataSet)">
-<summary>
-Update all changes to the dataset.
-</summary>
-</member>
-<member name="T:SPM.spmDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
-<summary>
-Update Order Option
-</summary>
-</member>
-<member name="T:SPM.spmDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
-<summary>
-Used to sort self-referenced table's rows
-</summary>
+<member name="M:SPM.SQLiteDatabase.ClearTable(System.String)">
+ <summary>
+     Allows the user to easily clear all data from a specific table.
+ </summary>
+ <param name="table">The name of the table to clear.</param>
+ <returns>A boolean true or false to signify success or failure.</returns>
 </member>
 </members>
 </doc>
