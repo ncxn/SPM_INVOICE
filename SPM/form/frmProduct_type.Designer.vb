@@ -22,89 +22,127 @@ Partial Class frmProduct_type
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.OlvColumn3 = CType(New BrightIdeasSoftware.OLVColumn(), BrightIdeasSoftware.OLVColumn)
-        Me.FOV_product_type = New BrightIdeasSoftware.FastDataListView()
-        Me.OlvColumn0 = CType(New BrightIdeasSoftware.OLVColumn(), BrightIdeasSoftware.OLVColumn)
-        Me.OlvColumn1 = CType(New BrightIdeasSoftware.OLVColumn(), BrightIdeasSoftware.OLVColumn)
-        Me.OlvColumn2 = CType(New BrightIdeasSoftware.OLVColumn(), BrightIdeasSoftware.OLVColumn)
-        CType(Me.FOV_product_type, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.components = New System.ComponentModel.Container()
+        Dim HeaderStateStyle1 As BrightIdeasSoftware.HeaderStateStyle = New BrightIdeasSoftware.HeaderStateStyle()
+        Dim HeaderStateStyle2 As BrightIdeasSoftware.HeaderStateStyle = New BrightIdeasSoftware.HeaderStateStyle()
+        Dim HeaderStateStyle3 As BrightIdeasSoftware.HeaderStateStyle = New BrightIdeasSoftware.HeaderStateStyle()
+        Me.HeaderFormatStyle1 = New BrightIdeasSoftware.HeaderFormatStyle()
+        Me.Grid_product_type = New DevExpress.XtraGrid.GridControl()
+        Me.GridView_pruduct_type = New DevExpress.XtraGrid.Views.Grid.GridView()
+        Me.GridColumn1 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn2 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.GridColumn3 = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.LayoutConverter1 = New DevExpress.XtraLayout.Converter.LayoutConverter(Me.components)
+        Me.frmProduct_typeLayoutControl1ConvertedLayout = New DevExpress.XtraLayout.LayoutControl()
+        Me.LayoutControlGroup1 = New DevExpress.XtraLayout.LayoutControlGroup()
+        Me.LayoutControlItem1 = New DevExpress.XtraLayout.LayoutControlItem()
+        CType(Me.Grid_product_type, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GridView_pruduct_type, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.frmProduct_typeLayoutControl1ConvertedLayout, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.SuspendLayout()
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'OlvColumn3
+        'HeaderFormatStyle1
         '
-        Me.OlvColumn3.AspectName = "product_type_parent"
-        Me.OlvColumn3.AspectToStringFormat = "{0}"
-        Me.OlvColumn3.Text = "Cấp"
-        Me.OlvColumn3.UseInitialLetterForGroup = True
-        Me.OlvColumn3.Width = 126
+        Me.HeaderFormatStyle1.Hot = HeaderStateStyle1
+        Me.HeaderFormatStyle1.Normal = HeaderStateStyle2
+        Me.HeaderFormatStyle1.Pressed = HeaderStateStyle3
         '
-        'FOV_product_type
+        'Grid_product_type
         '
-        Me.FOV_product_type.AllColumns.Add(Me.OlvColumn0)
-        Me.FOV_product_type.AllColumns.Add(Me.OlvColumn1)
-        Me.FOV_product_type.AllColumns.Add(Me.OlvColumn2)
-        Me.FOV_product_type.AllColumns.Add(Me.OlvColumn3)
-        Me.FOV_product_type.AlternateRowBackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
-        Me.FOV_product_type.AutoGenerateColumns = False
-        Me.FOV_product_type.CellEditUseWholeCell = False
-        Me.FOV_product_type.CheckBoxes = True
-        Me.FOV_product_type.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.OlvColumn0, Me.OlvColumn1, Me.OlvColumn2, Me.OlvColumn3})
-        Me.FOV_product_type.Cursor = System.Windows.Forms.Cursors.Default
-        Me.FOV_product_type.DataSource = Nothing
-        Me.FOV_product_type.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.FOV_product_type.EmptyListMsg = "Chưa có danh mục"
-        Me.FOV_product_type.EmptyListMsgFont = New System.Drawing.Font("MS Outlook", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(2, Byte))
-        Me.FOV_product_type.FullRowSelect = True
-        Me.FOV_product_type.Location = New System.Drawing.Point(0, 0)
-        Me.FOV_product_type.Name = "FOV_product_type"
-        Me.FOV_product_type.ShowImagesOnSubItems = True
-        Me.FOV_product_type.Size = New System.Drawing.Size(800, 450)
-        Me.FOV_product_type.SortGroupItemsByPrimaryColumn = False
-        Me.FOV_product_type.TabIndex = 0
-        Me.FOV_product_type.UseCompatibleStateImageBehavior = False
-        Me.FOV_product_type.UseFiltering = True
-        Me.FOV_product_type.UseSubItemCheckBoxes = True
-        Me.FOV_product_type.View = System.Windows.Forms.View.Details
-        Me.FOV_product_type.VirtualMode = True
+        Me.Grid_product_type.Location = New System.Drawing.Point(12, 12)
+        Me.Grid_product_type.MainView = Me.GridView_pruduct_type
+        Me.Grid_product_type.Name = "Grid_product_type"
+        Me.Grid_product_type.Size = New System.Drawing.Size(776, 426)
+        Me.Grid_product_type.TabIndex = 0
+        Me.Grid_product_type.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView_pruduct_type})
         '
-        'OlvColumn0
+        'GridView_pruduct_type
         '
-        Me.OlvColumn0.AspectName = "product_type_code"
-        Me.OlvColumn0.Groupable = False
-        Me.OlvColumn0.Text = "Mã nhóm"
-        Me.OlvColumn0.Width = 103
+        Me.GridView_pruduct_type.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3})
+        Me.GridView_pruduct_type.GridControl = Me.Grid_product_type
+        Me.GridView_pruduct_type.Name = "GridView_pruduct_type"
         '
-        'OlvColumn1
+        'GridColumn1
         '
-        Me.OlvColumn1.AspectName = "product_type_describe"
-        Me.OlvColumn1.Groupable = False
-        Me.OlvColumn1.Text = "Nhóm sản phẩm"
-        Me.OlvColumn1.Width = 238
+        Me.GridColumn1.Caption = "GridColumn1"
+        Me.GridColumn1.Name = "GridColumn1"
+        Me.GridColumn1.Visible = True
+        Me.GridColumn1.VisibleIndex = 0
         '
-        'OlvColumn2
+        'GridColumn2
         '
-        Me.OlvColumn2.AspectName = "product_type_active"
-        Me.OlvColumn2.CheckBoxes = True
-        Me.OlvColumn2.Groupable = False
-        Me.OlvColumn2.Text = "Sử dụng"
-        Me.OlvColumn2.Width = 171
+        Me.GridColumn2.Caption = "GridColumn2"
+        Me.GridColumn2.Name = "GridColumn2"
+        Me.GridColumn2.Visible = True
+        Me.GridColumn2.VisibleIndex = 1
+        '
+        'GridColumn3
+        '
+        Me.GridColumn3.Caption = "GridColumn3"
+        Me.GridColumn3.Name = "GridColumn3"
+        Me.GridColumn3.Visible = True
+        Me.GridColumn3.VisibleIndex = 2
+        '
+        'frmProduct_typeLayoutControl1ConvertedLayout
+        '
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.Controls.Add(Me.Grid_product_type)
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.Location = New System.Drawing.Point(0, 0)
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.Name = "frmProduct_typeLayoutControl1ConvertedLayout"
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.Root = Me.LayoutControlGroup1
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.Size = New System.Drawing.Size(800, 450)
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.TabIndex = 1
+        '
+        'LayoutControlGroup1
+        '
+        Me.LayoutControlGroup1.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.[True]
+        Me.LayoutControlGroup1.GroupBordersVisible = False
+        Me.LayoutControlGroup1.Items.AddRange(New DevExpress.XtraLayout.BaseLayoutItem() {Me.LayoutControlItem1})
+        Me.LayoutControlGroup1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlGroup1.Name = "LayoutControlGroup1"
+        Me.LayoutControlGroup1.Size = New System.Drawing.Size(800, 450)
+        Me.LayoutControlGroup1.TextVisible = False
+        '
+        'LayoutControlItem1
+        '
+        Me.LayoutControlItem1.Control = Me.Grid_product_type
+        Me.LayoutControlItem1.Location = New System.Drawing.Point(0, 0)
+        Me.LayoutControlItem1.Name = "Grid_product_typeitem"
+        Me.LayoutControlItem1.Size = New System.Drawing.Size(780, 430)
+        Me.LayoutControlItem1.TextSize = New System.Drawing.Size(0, 0)
+        Me.LayoutControlItem1.TextVisible = False
         '
         'frmProduct_type
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.FOV_product_type)
+        Me.Controls.Add(Me.frmProduct_typeLayoutControl1ConvertedLayout)
         Me.Name = "frmProduct_type"
+        Me.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Nhóm sản phẩm"
-        CType(Me.FOV_product_type, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Grid_product_type, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GridView_pruduct_type, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.frmProduct_typeLayoutControl1ConvertedLayout, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.frmProduct_typeLayoutControl1ConvertedLayout.ResumeLayout(False)
+        CType(Me.LayoutControlGroup1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.LayoutControlItem1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents FOV_product_type As BrightIdeasSoftware.FastDataListView
-    Friend WithEvents OlvColumn0 As BrightIdeasSoftware.OLVColumn
-    Friend WithEvents OlvColumn1 As BrightIdeasSoftware.OLVColumn
-    Friend WithEvents OlvColumn2 As BrightIdeasSoftware.OLVColumn
-    Friend WithEvents OlvColumn3 As BrightIdeasSoftware.OLVColumn
+    Friend WithEvents HeaderFormatStyle1 As BrightIdeasSoftware.HeaderFormatStyle
+    Friend WithEvents Grid_product_type As DevExpress.XtraGrid.GridControl
+    Friend WithEvents GridView_pruduct_type As DevExpress.XtraGrid.Views.Grid.GridView
+    Friend WithEvents GridColumn1 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn2 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents GridColumn3 As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents LayoutConverter1 As DevExpress.XtraLayout.Converter.LayoutConverter
+    Friend WithEvents frmProduct_typeLayoutControl1ConvertedLayout As DevExpress.XtraLayout.LayoutControl
+    Friend WithEvents LayoutControlGroup1 As DevExpress.XtraLayout.LayoutControlGroup
+    Friend WithEvents LayoutControlItem1 As DevExpress.XtraLayout.LayoutControlItem
 End Class

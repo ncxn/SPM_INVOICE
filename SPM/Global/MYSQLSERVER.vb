@@ -5,59 +5,50 @@ Public Class MYSQLSERVER
     Public Property Password = "mmttmhh"
     Public Property Database = "spm"
 
-    Public Function Connect_Server() As String
-        Connect_Server = "server=" & Server & ";" & "userid=" & UserName & ";" & "password=" & Password & ";" & "database=" & Database
-        Return Connect_Server
+    Public Function connstr() As String
+        connstr = "server=" & Server & ";" & "userid=" & UserName & ";" & "password=" & Password & ";" & "database=" & Database
+        Return connstr
     End Function
     Public Function Get_Row(SQLStatement As String) As ArrayList
         Dim Result As New ArrayList
-        Dim Reader As MySqlDataReader
-        Dim MySQL_Connection As New MySqlConnection
-        Dim MySQL_Command As New MySqlCommand
-        Try
-            MySQL_Connection.ConnectionString = Connect_Server()
-            MySQL_Command.CommandText = SQLStatement
-            MySQL_Command.Connection = MySQL_Connection
-            MySQL_Connection.Open()
-            MessageBox.Show("Connection to Database has been opened.")
+        Dim conn As New MySqlConnection(connstr)
 
-            Reader = MySQL_Command.ExecuteReader
-            While Reader.Read()
+        Try
+            conn.Open()
+            Dim cmd As New MySqlCommand(SQLStatement, conn)
+            Dim reader As MySqlDataReader = cmd.ExecuteReader()
+
+            While reader.Read()
                 Dim dict As New Dictionary(Of String, Object)
-                For count As Integer = 0 To (Reader.FieldCount - 1)
-                    dict.Add(Reader.GetName(count), Reader(count))
+                For count As Integer = 0 To (reader.FieldCount - 1)
+                    dict.Add(reader.GetName(count), reader(count))
                 Next
                 Result.Add(dict)
             End While
-            Reader.Close()
-            MySQL_Connection.Close()
+            reader.Close()
+
         Catch ex As Exception
-            MessageBox.Show("MySQL retrieve row: " & ex.Message & Err.Number)
+            MessageBox.Show("không thể kết nối với dữ liệu: " & ex.Message & Err.Number)
         Finally
-            MySQL_Connection.Dispose()
-            MySQL_Connection = Nothing
-            Reader = Nothing
+            conn.Close()
         End Try
         GC.Collect()
         Return Result
     End Function
     Public Function Get_Value(SQLStatement As String) As String
+        Dim conn As New MySqlConnection(connstr)
         Dim Result As String
-        Dim MySQL_Connection As New MySqlConnection
-        Dim MySQL_Command As New MySqlCommand
         Try
-            MySQL_Connection.ConnectionString = Connect_Server()
-            MySQL_Command.CommandText = SQLStatement
-            MySQL_Command.Connection = MySQL_Connection
-            MySQL_Connection.Open()
-            Result = MySQL_Command.ExecuteScalar()
-            MySQL_Connection.Close()
+            conn.Open()
+            Dim cmd As New MySqlCommand(SQLStatement, conn)
+            Result = cmd.ExecuteScalar()
+            conn.Close()
         Catch ex As Exception
             Console.WriteLine("MySQL retrieve value: " & ex.Message & Err.Number)
             Result = Nothing
         Finally
-            MySQL_Connection.Dispose()
-            MySQL_Connection = Nothing
+            conn.Dispose()
+            conn = Nothing
         End Try
         GC.Collect()
         Return Result
@@ -65,19 +56,16 @@ Public Class MYSQLSERVER
     Public Function Get_Table(SQLStatement As String) As DataTable
         Dim table As New DataTable
         Dim Reader As MySqlDataReader
-        Dim MySQL_Connection As New MySqlConnection
+        Dim conn As New MySqlConnection(connstr)
         Dim MySQL_Command As New MySqlCommand
         Try
-            MySQL_Connection.ConnectionString = Connect_Server()
-            MySQL_Command.CommandText = SQLStatement
-            MySQL_Command.Connection = MySQL_Connection
-            MySQL_Connection.Open()
-            Reader = MySQL_Command.ExecuteReader
+            conn.Open()
+            Dim da As New MySqlDataAdapter(SQLStatement, conn)
             table.Load(Reader)
             Reader.Close()
             MySQL_Connection.Close()
         Catch ex As Exception
-            MessageBox.Show("MySQL retrieve table: " & ex.Message & Err.Number)
+            MessageBox.Show("Không thể kết nối với dữ liệu: " & ex.Message & Err.Number)
             table = Nothing
         Finally
             MySQL_Connection.Dispose()

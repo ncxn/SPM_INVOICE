@@ -1,8 +1,6 @@
 ﻿Imports System
-Imports System.Collections.Generic
-Imports System.Data
+
 Imports System.Data.SQLite
-Imports System.Windows.Forms
 Class SQLiteDatabase
 
     Dim dbConnection As String = "Data Source=dbs\spm.db3;Version=3;"
