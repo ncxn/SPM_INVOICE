@@ -16,39 +16,40 @@ Public Class Product
     End Sub
 
     Private Sub LKEnhom_GotFocus(sender As Object, e As EventArgs) Handles LKEnhom.GotFocus
-        Dim Nhoms As List(Of Nhom) = New List(Of Nhom)()
-        Nhoms.Add(New Nhom() With {
+        Dim Nhoms As List(Of Nhom) = New List(Of Nhom) From {
+            New Nhom() With {
             .MaNhom = "01",
             .TenNhom = "Vitamin khoáng chất"
-        })
-        Nhoms.Add(New Nhom() With {
+        },
+            New Nhom() With {
             .MaNhom = "02",
             .TenNhom = "Giảm đau, hạ nhiệt, kháng viêm, dị ứng"
-        })
-        Nhoms.Add(New Nhom() With {
+        },
+            New Nhom() With {
             .MaNhom = "03",
             .TenNhom = "Tim mạch, thần kinh,tuần hoàn não"
-        })
-        Nhoms.Add(New Nhom() With {
+        },
+            New Nhom() With {
             .MaNhom = "04",
             .TenNhom = "Kháng nấm"
-        })
-        Nhoms.Add(New Nhom() With {
+        },
+            New Nhom() With {
             .MaNhom = "05",
             .TenNhom = "Kháng sinh"
-        })
-        Nhoms.Add(New Nhom() With {
+        },
+            New Nhom() With {
             .MaNhom = "06",
             .TenNhom = "Tiêu hóa, thận niệu"
-        })
-        Nhoms.Add(New Nhom() With {
+        },
+            New Nhom() With {
             .MaNhom = "07",
             .TenNhom = "Giảm ho, long đàm, hô hấp"
-        })
-        Nhoms.Add(New Nhom() With {
+        },
+            New Nhom() With {
             .MaNhom = "08",
             .TenNhom = "Tẩy giun"
-        })
+        }
+        }
         LKEnhom.Properties.DataSource = Nhoms
         LKEnhom.Properties.ValueMember = "MaNhom"
         LKEnhom.Properties.DisplayMember = "TenNhom"

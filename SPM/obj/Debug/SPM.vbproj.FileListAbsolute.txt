@@ -11,7 +11,6 @@ D:\VB\SPM\SPM\obj\Debug\SPM.xml
 D:\VB\SPM\SPM\obj\Debug\SPM.pdb
 D:\VB\SPM\SPM\bin\Debug\Newtonsoft.Json.dll
 D:\VB\SPM\SPM\bin\Debug\Newtonsoft.Json.xml
-D:\VB\SPM\SPM\obj\Debug\SPM.Main.resources
 D:\VB\SPM\SPM\bin\Debug\vnConvert.dll
 D:\VB\SPM\SPM\bin\Debug\EntityFramework.dll
 D:\VB\SPM\SPM\bin\Debug\EntityFramework.SqlServer.dll
@@ -108,3 +107,12 @@ D:\VB\SPM\SPM\bin\Debug\es\DevExpress.Office.v18.2.Core.resources.dll
 D:\VB\SPM\SPM\bin\Debug\ja\DevExpress.Office.v18.2.Core.resources.dll
 D:\VB\SPM\SPM\bin\Debug\ru\DevExpress.Office.v18.2.Core.resources.dll
 D:\VB\SPM\SPM\obj\Debug\SPM.Product.resources
+D:\VB\SPM\SPM\bin\Debug\DevExpress.XtraNavBar.v18.2.dll
+D:\VB\SPM\SPM\bin\Debug\DevExpress.XtraNavBar.v18.2.xml
+D:\VB\SPM\SPM\bin\Debug\de\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\VB\SPM\SPM\bin\Debug\es\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\VB\SPM\SPM\bin\Debug\ja\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\VB\SPM\SPM\bin\Debug\ru\DevExpress.XtraNavBar.v18.2.resources.dll
+D:\VB\SPM\SPM\obj\Debug\SPM.vbprojAssemblyReference.cache
+D:\VB\SPM\SPM\obj\Debug\SPM.SplashScreen.resources
+D:\VB\SPM\SPM\obj\Debug\SPM.WaitForm.resources
